@@ -132,4 +132,13 @@
       <Name>SMOPAYE_MOBILE_Xamarin</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_official.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_screen_splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bg_screen_splash.png" />
+  </ItemGroup>
 </Project>
