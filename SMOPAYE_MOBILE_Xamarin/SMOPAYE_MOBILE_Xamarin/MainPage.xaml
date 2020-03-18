@@ -4,13 +4,28 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="SMOPAYE_MOBILE_Xamarin.MainPage">
+             x:Class="SMOPAYE_MOBILE_Xamarin.MainPage"
+             BackgroundImageSource="bg_screen_splash">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+    <StackLayout Orientation="Vertical" 
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center">
+        
+        <Image Source="logo_screen_splash.png"
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+               VerticalOptions="CenterAndExpand"
+               WidthRequest="180"
+               />
+        <ProgressBar  ProgressColor="White" 
+                      VerticalOptions="Center"
+                      HorizontalOptions="Center"/>
+        <!-- Place new controls here -->
+        <Label Text="Chargement Encours..." 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           TextColor="White"
+           FontAttributes="Bold"/>
+        
     </StackLayout>
 
 </ContentPage>
