@@ -18,6 +18,11 @@ namespace SMOPAYE_MOBILE_Xamarin
 
         public MainPage()
         {
+            //activityIndicator
+            this.BindingContext = this;
+            this.IsBusy = true;
+
+
             NavigationPage.SetHasNavigationBar(this, false);
             var sub = new AbsoluteLayout();
             splashImage = new Image
@@ -34,7 +39,6 @@ namespace SMOPAYE_MOBILE_Xamarin
             this.Title = "Chargement Encours...";
             this.BackgroundImageSource = "bg_screen_splash.png";
             this.Content = sub;
-
         }
 
         protected override async void OnAppearing()
@@ -43,6 +47,7 @@ namespace SMOPAYE_MOBILE_Xamarin
             await splashImage.ScaleTo(1, 5000);
             await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
             await splashImage.ScaleTo(150, 1200, Easing.Linear);
+            this.IsBusy = true;
             Application.Current.MainPage = new NavigationPage(new LoginPage()); //after loading MainPage it gets Navigated
         }
 

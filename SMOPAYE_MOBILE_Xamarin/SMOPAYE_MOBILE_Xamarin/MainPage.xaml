@@ -7,6 +7,8 @@
              x:Class="SMOPAYE_MOBILE_Xamarin.MainPage"
              BackgroundImageSource="bg_screen_splash">
 
+    
+
     <StackLayout Orientation="Vertical" 
                  VerticalOptions="Center" 
                  HorizontalOptions="Center">
@@ -16,9 +18,12 @@
                VerticalOptions="CenterAndExpand"
                WidthRequest="180"
                />
-        <ProgressBar  ProgressColor="White" 
-                      VerticalOptions="Center"
-                      HorizontalOptions="Center"/>
+
+        <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" 
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Color="White"/>
+        
         <!-- Place new controls here -->
         <Label Text="Chargement Encours..." 
            HorizontalOptions="Center"
